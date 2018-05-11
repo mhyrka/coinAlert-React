@@ -5,7 +5,7 @@ import './App.css';
 import Header from './components/Header'
 import Value from './components/Value'
 import Parameters from './components/Parameters'
-import Button from './components/Button'
+import SetAlert from './components/SetAlert'
 
 class App extends Component {
   render() {
@@ -13,8 +13,9 @@ class App extends Component {
 
       <main>
         <Header />
-        <Parameters />
         <Value />
+        <Parameters />
+        <SetAlert />
       </main>
     );
   }
