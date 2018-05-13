@@ -16,7 +16,7 @@ class Value extends React.Component {
     fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
     .then(response => response.json())
     .then(response => {
-      let coinValueDisplay = (this.state.currencySymbol + response.bpi[this.state.currencySelected].rate_float)
+      let coinValueDisplay = (this.state.currencySymbol + ' ' + response.bpi[this.state.currencySelected].rate_float)
       this.setState({
         coinValue: coinValueDisplay,
         initialValue: response.bpi[this.state.currencySelected].rate_float
@@ -38,11 +38,17 @@ class Value extends React.Component {
 
   handleCurrencyChange = (event, currency) => {
     event.preventDefault()
-    console.log(currency)
-    this.setState({
-      currencySelected: currency
+    fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+    .then(response => response.json())
+    .then(response => {
+      let coinValueDisplay = (this.state.currencySymbol + ' ' + response.bpi[currency].rate_float)
+      this.setState({
+        coinValue: coinValueDisplay,
+        currencySelected: currency,
+        initialValue: response.bpi[currency].rate_float
+      })
     })
-
+    console.log(currency)
     switch (currency) {
       case 'USD':
         this.setState({
@@ -60,8 +66,8 @@ class Value extends React.Component {
         })
         break;
       default:
-
     }
+    console.log(this.state.initialValue)
   }
 
   render() {
