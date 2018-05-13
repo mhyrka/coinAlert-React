@@ -115,10 +115,11 @@ h3 {
 
 .set-alert {
 	width: 100vw;
-	height: 25vh;
+	height: 40vh;
 	display: flex;
-	justify-content: center;
-	/* align-items: center; */
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 #set-alert-btn {
@@ -128,12 +129,12 @@ h3 {
 
 .current-price {
 	width: 100vw;
-	height: 35vh;
+	height: 30vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	
+
 }
 
 .value-display {
@@ -209,11 +210,10 @@ nav {
 	color: black;
 }
 
-input {
-	width: 40vw;
-	height: 100%;
-	font-size: 300%;
-	border: 2px solid black;
+#input {
+	width: 502px;
+	margin-top: 0;
+	margin-bottom: 5vh;
 }
 
 #about-coin-alert {

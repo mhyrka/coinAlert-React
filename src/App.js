@@ -37,11 +37,6 @@ class App extends Component {
       <main>
         <Header />
         <Value />
-        <Parameters />
-
-        <AlertProvider template={AlertTemplate} {...options}>
-          <SetAlert />
-        </AlertProvider>
 
       </main>
     );

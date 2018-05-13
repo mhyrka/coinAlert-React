@@ -1,5 +1,19 @@
 import React from 'react'
-import { Dropdown, NavItem, Button } from 'react-materialize'
+import SetAlert from './SetAlert'
+
+import { Button, Icon, Dropdown, NavItem } from 'react-materialize'
+import { withAlert } from 'react-alert'
+import { Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from "react-alert-template-basic"
+
+const options = {
+  position: 'bottom center',
+  timeout: 5000,
+  offset: '40px',
+  transition: 'scale',
+  width: '500px'
+}
+
 
 class Value extends React.Component {
   constructor() {
@@ -29,7 +43,8 @@ class Value extends React.Component {
       .then(response => {
         let coinValueDisplay = (this.state.currencySymbol + ' ' + response.bpi[this.state.currencySelected].rate_float)
         this.setState({
-          coinValue: coinValueDisplay
+          coinValue: coinValueDisplay,
+          coinValueFloat: response.bpi[this.state.currencySelected].rate_float
         })
       })
     }, 1000)
@@ -44,6 +59,7 @@ class Value extends React.Component {
       let coinValueDisplay = (this.state.currencySymbol + ' ' + response.bpi[currency].rate_float)
       this.setState({
         coinValue: coinValueDisplay,
+        coinValueFloat: response.bpi[currency].rate_float,
         currencySelected: currency,
         initialValue: response.bpi[currency].rate_float
       })
@@ -72,22 +88,29 @@ class Value extends React.Component {
 
   render() {
     return (
-      <section className="current-price">
+      <div>
+        <section className="current-price">
 
-        <div className="value-display">
-          <i className="fab fa-bitcoin" id="bitcoin"></i>
-          <p id="fat-arrow">=></p>
-          <h3>{this.state.coinValue}</h3>
-        </div>
+          <div className="value-display">
+            <i className="fab fa-bitcoin" id="bitcoin"></i>
+            <p id="fat-arrow">=></p>
+            <h3>{this.state.coinValue}</h3>
+          </div>
 
-        <Dropdown trigger={<Button id="dropdown-btn" style={{width: 502}} type="button">Select Currency</Button>}>
-          <NavItem onClick={(e) => this.handleCurrencyChange(e,'USD')}>U.S. Dollar</NavItem>
-          <NavItem onClick={(e) => this.handleCurrencyChange(e, 'GBP')}>Great British Pound</NavItem>
-          <NavItem divider />
-          <NavItem onClick={(e) => this.handleCurrencyChange(e, 'EUR')}>Euro</NavItem>
-        </Dropdown>
+          <Dropdown trigger={<Button id="dropdown-btn" style={{width: 502}} type="button">Select Currency</Button>}>
+            <NavItem onClick={(e) => this.handleCurrencyChange(e,'USD')}>U.S. Dollar</NavItem>
+            <NavItem onClick={(e) => this.handleCurrencyChange(e, 'GBP')}>Great British Pound</NavItem>
+            <NavItem divider />
+            <NavItem onClick={(e) => this.handleCurrencyChange(e, 'EUR')}>Euro</NavItem>
+          </Dropdown>
 
-      </section>
+        </section>
+
+        <AlertProvider template={AlertTemplate} {...options}>
+          <SetAlert initialValue={this.state.initialValue}
+                    coinValueFloat={this.state.coinValueFloat} />
+        </AlertProvider>
+      </div>
     )
   }
 }
