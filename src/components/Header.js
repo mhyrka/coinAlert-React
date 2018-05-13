@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Icon, Modal, p, Navbar, NavItem} from 'react-materialize'
+import { Modal, p, Navbar, NavItem } from 'react-materialize'
 
 class Header extends React.Component {
   constructor() {

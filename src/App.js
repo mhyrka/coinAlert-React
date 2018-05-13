@@ -8,9 +8,20 @@ import Parameters from './components/Parameters'
 import SetAlert from './components/SetAlert'
 
 class App extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      initialValue: 0,
+      coinValue: '',
+      currencySelected: 'USD',
+      currencySymbol: '$'
+    }
+  }
+
+
   render() {
     return (
-
       <main>
         <Header />
         <Value />

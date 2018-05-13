@@ -6,3 +6,38 @@
   </div>
   <h1>coin alert</h1>
 </header>
+
+
+```
+<div className="parameters-section">
+  <div id="currency-selector-dropdown" onChange={(e) => this.handleCurrencyChange(e)}>
+    <Dropdown trigger={<Button id="dropdown-btn" style={{width: 502}} >Select Currency</Button>}>
+      <NavItem>U.S. Dollar</NavItem>
+      <NavItem>Great British Pound</NavItem>
+      <NavItem divider />
+      <NavItem>Euro</NavItem>
+    </Dropdown>
+  </div>
+
+  <div className="alert-parameters">
+    <div>
+      <Dropdown trigger={<Button id="percent-gain" style={{width: 241}}>% Gain</Button>}>
+        <NavItem>.01%</NavItem>
+        <NavItem>5%</NavItem>
+        <NavItem>10%</NavItem>
+        <NavItem divider />
+      </Dropdown>
+
+      <Dropdown trigger={<Button id="percent-loss" style={{width: 241}}>% Loss</Button>}>
+        <NavItem>.01%</NavItem>
+        <NavItem>5%</NavItem>
+        <NavItem>10%</NavItem>
+        <NavItem divider />
+      </Dropdown>
+    </div>
+```
+
+
+onClick={(e) => this.handleCurrencyChange(e, 'GBP')}
+
+options={{onCloseEnd: (e) => {window.alert('hi')}}

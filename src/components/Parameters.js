@@ -1,19 +1,14 @@
 import React from 'react'
 
-import { Dropdown, NavItem, Button, Tabs, Tab } from 'react-materialize'
+import { Dropdown, NavItem, Button } from 'react-materialize'
+
 
 class Parameters extends React.Component {
+
   render() {
     return (
       <div className="parameters-section">
-        <div id="currency-selector-dropdown">
-          <Dropdown trigger={<Button id="dropdown-btn" style={{width: 502}}>Select Currency</Button>}>
-            <NavItem>U.S. Dollar</NavItem>
-            <NavItem>Great British Pound</NavItem>
-            <NavItem divider />
-            <NavItem>Euro</NavItem>
-          </Dropdown>
-        </div>
+
 
         <div className="alert-parameters">
           <div>
@@ -31,7 +26,6 @@ class Parameters extends React.Component {
               <NavItem divider />
             </Dropdown>
           </div>
-
         </div>
       </div>
     )
