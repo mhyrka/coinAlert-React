@@ -24,22 +24,34 @@ class SetAlert extends React.Component {
     })
   }
 
-  setPercentGain(event, percentage) {
+  setPercentGain = (event, percentage) => {
     event.preventDefault()
     this.setState({
       percentGain: percentage
     })
   }
 
-  setPercentLoss(event, percentage) {
+  setPercentLoss = (event, percentage) => {
     event.preventDefault()
     this.setState({
       percentLoss: percentage
     })
   }
 
-  setCustomValue(event) {
+  setCustomValue = (event) => {
     event.preventDefault()
+  }
+
+  setAlert = (event) => {
+    event.preventDefault()
+    this.interval = setInterval(() => {
+      console.log('fn running')
+      if (this.props.currentPrice > ((this.state.initialValue * (this.state.percentGain / 100)))) {
+        () => { this.props.alert.show(`BTC has gained ${this.state.percentGain}%!`) }
+      } else if (this.props.currentPrice < (this.state.initialValue - (this.state.initialValue * (this.state.percentLoss / 100))) && this.state.percentLoss !== 0) {
+        () => { this.props.alert.show(`BTC has lost ${this.state.percentLoss}%!`) }
+      }
+    }, 500)
   }
 
   render() {
@@ -69,7 +81,9 @@ class SetAlert extends React.Component {
         </Row>
 
         <Button onClick={
-          () => {this.props.alert.show("Oh look, an alert!")}
+
+          (event) => { this.props.alert.show(`Alert Set. You will be notified when BTC gains ${this.state.percentGain}%`); { this.setAlert(event) } }
+
           }
           id="set-alert-btn"
           style={{width: 502}}

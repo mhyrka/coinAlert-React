@@ -30,7 +30,7 @@ class Value extends React.Component {
     fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
     .then(response => response.json())
     .then(response => {
-      let coinValueDisplay = (this.state.currencySymbol + ' ' + response.bpi[this.state.currencySelected].rate_float)
+      let coinValueDisplay = (this.state.currencySymbol + response.bpi[this.state.currencySelected].rate_float)
       this.setState({
         coinValue: coinValueDisplay,
         initialValue: response.bpi[this.state.currencySelected].rate_float
@@ -41,10 +41,10 @@ class Value extends React.Component {
       fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
       .then(response => response.json())
       .then(response => {
-        let coinValueDisplay = (this.state.currencySymbol + ' ' + response.bpi[this.state.currencySelected].rate_float)
+        let coinValueDisplay = (this.state.currencySymbol + response.bpi[this.state.currencySelected].rate_float)
         this.setState({
           coinValue: coinValueDisplay,
-          coinValueFloat: response.bpi[this.state.currencySelected].rate_float
+          currentPrice: response.bpi[this.state.currencySelected].rate_float
         })
       })
     }, 1000)
@@ -56,10 +56,10 @@ class Value extends React.Component {
     fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
     .then(response => response.json())
     .then(response => {
-      let coinValueDisplay = (this.state.currencySymbol + ' ' + response.bpi[currency].rate_float)
+      let coinValueDisplay = (this.state.currencySymbol + response.bpi[currency].rate_float)
       this.setState({
         coinValue: coinValueDisplay,
-        coinValueFloat: response.bpi[currency].rate_float,
+        currentPrice: response.bpi[currency].rate_float,
         currencySelected: currency,
         initialValue: response.bpi[currency].rate_float
       })
@@ -108,7 +108,7 @@ class Value extends React.Component {
 
         <AlertProvider template={AlertTemplate} {...options}>
           <SetAlert initialValue={this.state.initialValue}
-                    coinValueFloat={this.state.coinValueFloat} />
+                    currentPrice={this.state.currentPrice} />
         </AlertProvider>
       </div>
     )

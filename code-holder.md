@@ -41,3 +41,18 @@
 onClick={(e) => this.handleCurrencyChange(e, 'GBP')}
 
 options={{onCloseEnd: (e) => {window.alert('hi')}}
+
+if (globalCurrentPrice > ((initialValue[currencySelected] * (percentGain / 100)) + initialValue[currencySelected]) && percentGain !== 0) {
+  window.alert(`Bitcoin has gained ${percentGain}%`)
+  clearInterval(window.myInterval)
+} else if (globalCurrentPrice < (initialValue[currencySelected] - (initialValue[currencySelected] * (percentLoss / 100))) && percentLoss !== 0) {
+  window.alert(`Bitcoin has lost ${percentLoss}%`)
+  clearInterval(window.myInterval)
+} else if (parseInt(globalCurrentPrice) === parseInt(customPrice)){
+  window.alert(`Bitcoin has reached value: ${customPrice}!`)
+  clearInterval(window.myInterval)
+}
+
+
+
+this.props.alert.show(`Alert Set. You will be notified when BTC gains ${this.state.percentGain}%`);
