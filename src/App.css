@@ -26,14 +26,6 @@ body {
 
 }
 
-header {
-	height: 22vh;
-	border-bottom: 1px solid rgba(0, 0, 0, .5);
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: bold;
-	font-style: italic;
-}
-
 
 h1 {
 	font-family: 'Ubuntu', sans-serif;
@@ -113,6 +105,7 @@ h3 {
 	padding-left: 20vw;
 }
 
+
 .set-alert {
 	width: 100vw;
 	height: 40vh;
@@ -144,39 +137,6 @@ h3 {
 	align-items: center;
 	width: 50vw;
 	font-size: 200%;
-}
-
-.currency-options {
-	font-size: 300%;
-	width: 100vw;
-	height: 9.5vh;
-	text-align: center;
-	text-align-last: center;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	background: #0074D9;
-	font-family: Arial;
-	color: #ffffff;
-	border-top: 1px solid black;
-	border-bottom: 2px solid black;
-
-}
-
-.text-and-currency-selection {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 60vw;
-	text-align: center;
-}
-
-.menu {
-  height: 100%;
-  display: flex;
-  align-items: center;
-
 }
 
 #nav-bar {
@@ -230,260 +190,218 @@ nav {
 #dropdown-btn {
 	background: #335C81;
 	margin-bottom: 2.5vh;
+	width: 502px;
 }
+
 #percent-gain {
 	background: #335C81;
 	margin-right: 10px;
+	width: 241px;
 }
 
 #percent-loss {
 	background: #335C81;
 	margin-left: 10px;
-}
-
-a {
-
+	width: 241px;
 }
 
 @media only screen
-	and (max-device-width: 600px)
+	and (max-device-width: 700px)
 	and (-webkit-min-device-pixel-ratio: 1) {
 		body {
-		  height: 100vh;
-		  width: 100vw;
-		  /* background: rgb(255, 249, 239); */
+			height: 100vh;
+			width: 100vw;
+			background: #F1F7FF;
 		}
-
-		#bitcoin {
-			font-size: 115%;
-		}
-
-
-		header {
-		  height: 22vh;
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
-		  border-bottom: 2px solid black;
-		  /* font-size: 150%; */
-		  font-family: 'Ubuntu', sans-serif;
-		  font-weight: bold;
-		  font-style: italic;
-		}
-
-		h1 {
-		  font-family: 'Ubuntu', sans-serif;
-		  font-weight: bold;
-		  font-style: italic;
-		  /* font-size: 400%; */
-			color: #65AFFF;
-			text-shadow: #000 .35vw .35vw .35vw;
-			/* margin-right: 4.5vw; */
-		}
-
-		h2 {
-		  /* font-size: 300%; */
-		  font-family: 'Ubuntu', sans-serif;
-		  font-weight: bold;
-		  font-style: italic;
-		  margin-bottom: 5vh;
-		}
-
-		h3 {
-		  /* margin-top: 2.5vh; */
-		  font-size: 200%;
-		  font-family: 'Ubuntu', sans-serif;
-		  font-weight: bold;
-		}
-
-		#set-parameters {
-		  font-size: 500%;
-		  margin-top: 4vh;
-		  font-weight: bold;
-		  font-family: 'Ubuntu', sans-serif;
-		  font-weight: bold;
-		}
-
-		.set-by-percentage {
-		  display: flex;
-		  flex-direction: row;
-		  justify-content: space-around;
-		  align-items: flex-start;
-		  height: 9.5vh;
-		  width: 100vw;
-		  margin-top: 2.5vh;
-		}
-
-		.set-alert-button {
-		  width: 100vw;
-		  height: 10vh;
-
-
-		}
-
-		#increase-dropdown {
-		  width: 50vw;
-		}
-
-		#decrease-dropdown {
-		  width: 50vw;
-		}
-
-		#percent-increase {
-		  font-size: 200%;
-		  padding-left: 20vw;
-		}
-
-		#percent-decrease {
-		  font-size: 200%;
-		  padding-left: 20vw;
-		}
-
-
-		.custom-price-alert {
-		  display: flex;
-		  flex-direction: row;
-		  height: 7vh;
-		  width: 100vw;
-		  justify-content: space-around;
-		  align-items: center;
-		  margin-top: 4.05vh;
-			font-size: 80%;
-		}
-
-		.current-price {
-		  width: 100vw;
-		  height: 22vh;
-		  display: flex;
-		  /* flex-direction: row; */
-		  align-items: center;
-		  justify-content: space-between;
-		  border-bottom: 1px solid black;
-		  font-size: 200%;
-      background-color: red;
-		}
-
-		.currency-options {
-		  font-size: 300%;
-		  width: 100vw;
-		  height: 9.5vh;
-		  text-align: center;
-			text-align-last: center;
-		  -webkit-border-radius: 5px;
-		  -moz-border-radius: 5px;
-		  border-radius: 5px;
-		  background: #0074D9;
-		  font-family: Arial;
-		  color: #ffffff;
-		  border-top: 1px solid black;
-		  border-bottom: 2px solid black;
-
-		}
-
-		#curr-selec {
-			text-align: center;
-		}
-
-		.text-and-currency-selection {
-		  display: flex;
-		  flex-direction: row;
-		  justify-content: center;
-		  align-items: center;
-			width: 60vw;
-			text-align: center;
-		}
-
-
-		h4 {
-		  font-size: 400%;
-		  height: 70%;
-		  width: 40vw;
-		  font-family: 'Ubuntu', sans-serif;
-		  font-weight: bold;
-		}
-
-		input {
-		  width: 40vw;
-		  height: 100%;
-		  font-size: 300%;
-			border: 2px solid black;
-		}
-
-		select {
-		  height: 7vh;
-		  width: 30vw;
-			font-weight: bold;
-			font-size: 125%;
-			cursor: pointer;
-		}
-
-
-		.percent-change-options {
-		  width: 50vw;
-		  font-size: 300%;
-		  padding-left: 17.5vw;
-		  border: 2px solid black;
-		  margin-top: 2.5vh;
-		}
-}
-
-@media only screen
-	and (min-device-width: 620px)
-	and (-webkit-min-device-pixel-ratio: 1) {
-		body {
-		  /* background-color: rgb(255, 249, 239); */
-		  height: 100vh;
-		  width: 100vw;
-		}
-
 
 		h1 {
 			font-family: 'Ubuntu', sans-serif;
 			font-weight: bold;
 			font-style: italic;
-		  /* font-size: 400%; */
-			/* margin-right: 4.5vw; */
+			font-size: 200%;
+			color: #65AFFF;
+			text-shadow: #000 .35vw .35vw .35vw;
+			margin-left: 0;
+			margin-top: 1.25vh;
+		}
+
+		#getting-started {
+			margin-top: 15px;
+		}
+
+		.nav-wrapper {
+			display: flex;
+			justify-content: center;
+			/* align-items: center; */
+		}
+
+		.button-collapse {
+			display: none;
+		}
+
+		i {
+			display: hidden;
 		}
 
 		h2 {
-		  font-size: 100%;
+			font-size: 300%;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: bold;
+			font-style: italic;
+			margin-bottom: 5vh;
 		}
 
-
-		h4 {
-		  font-size: 300%;
-		  padding-left: 15vw;
-			height: 70%;
-			width: 40vw;
+		h3 {
+			font-size: 125%;
 			font-family: 'Ubuntu', sans-serif;
 			font-weight: bold;
 		}
 
-		section {
-		  font-size: auto;
-		}
-
-		header {
-      width: 100vw;
-      height: 20vh;
-		  display: flex;
-		  flex-direction: row;
-		  align-items: center;
-		  align-content: center;
-		}
-
-		.text-and-currency-selection {
-		  font-size: 50%;
-		}
 		#set-parameters {
-		  font-size: 200%;
+			font-size: 500%;
+			margin-top: 4vh;
+			font-weight: bold;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: bold;
 		}
-		.percent-change-options {
-		  font-size: 100%;
+
+		#bitcoin {
+		  /* margin-right: 2.5vw; */
+		  /* font-size: 150%; */
 		}
-		.custom-price-alert {
-		  font-size: 50%;
-			height: 10vh;
-			margin-top: 5vh;
+
+		#fat-arrow {
+		  margin-right: 2.5vw;
 		}
-	}
+
+		.set-by-percentage {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: flex-start;
+			height: 9.5vh;
+			width: 100vw;
+			margin-top: 2.5vh;
+		}
+
+		.set-alert-button {
+			width: 100vw;
+			height: 13vh;
+		}
+
+		#increase-dropdown {
+			width: 50vw;
+		}
+
+		#decrease-dropdown {
+			width: 50vw;
+		}
+
+		#percent-increase {
+			font-size: 200%;
+			padding-left: 20vw;
+		}
+
+		#percent-decrease {
+			font-size: 200%;
+			padding-left: 20vw;
+		}
+
+		.set-alert {
+			width: 100vw;
+			height: 40vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		#set-alert-btn {
+			height: 12.5vh;
+			background: #D36060;
+		}
+
+		.current-price {
+			height: 30vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.value-display {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 50vw;
+			font-size: 200%;
+			margin-top: 3.5vh;
+		}
+
+		#nav-bar {
+			background: #335C81;
+		}
+
+		#parameters {
+			width: 100%;
+			margin-top: 25px;
+			background: #335C81;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		.parameters-section {
+			height: 15vh;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+
+		nav {
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 125%;
+			font-weight: bold;
+			font-style: italic;
+			color: black;
+		}
+
+		#input {
+			width: 80vw;
+			margin-top: 0;
+			margin-bottom: 5vh;
+		}
+
+		#about-coin-alert {
+			color: #0074D9;
+		}
+
+		#currency-selector-dropdown {
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#dropdown-btn {
+			background: #335C81;
+			margin-bottom: 2.5vh;
+			width: 100vw;
+		}
+
+		#percent-gain {
+			background: #335C81;
+			margin-right: 10px;
+			width: 40vw;
+		}
+
+		#percent-loss {
+			background: #335C81;
+			margin-left: 10px;
+			width: 40vw;
+		}
+}

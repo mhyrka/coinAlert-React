@@ -2,12 +2,6 @@ import React from 'react'
 import { Modal, p, Navbar, NavItem } from 'react-materialize'
 
 class Header extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      showModal: false
-    }
-  }
 
   render() {
     return (

@@ -1,8 +1,7 @@
 import React from 'react'
 import SetAlert from './SetAlert'
 
-import { Button, Icon, Dropdown, NavItem } from 'react-materialize'
-import { withAlert } from 'react-alert'
+import { Button, Dropdown, NavItem } from 'react-materialize'
 import { Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from "react-alert-template-basic"
 
@@ -64,7 +63,7 @@ class Value extends React.Component {
         initialValue: response.bpi[currency].rate_float
       })
     })
-    console.log(currency)
+    .then(console.log(this.state.initialValue))
     switch (currency) {
       case 'USD':
         this.setState({
