@@ -2,6 +2,7 @@ import React from 'react'
 import SetAlert from './SetAlert'
 
 import { Button, Dropdown, NavItem } from 'react-materialize'
+import { withAlert } from 'react-alert'
 import { Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from "react-alert-template-basic"
 
