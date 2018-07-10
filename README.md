@@ -14,3 +14,15 @@ React.js
 React-Materialize
 React-Alerts
 Now
+
+## **Author**
+
+- Matthew Hyrka
+- mhyrka@gmail.com
+- linkedin.com/in/mhyrka
+
+### **License**
+
+MIT
+
+![CoinAlert](./public/CoinAlertSS.png)
