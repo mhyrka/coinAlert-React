@@ -7,6 +7,8 @@ CoinAlert utilizes the CoinDesk API to track the price of bitcoin across three c
 
 Click [here](https://build-cdidooojrx.now.sh) to visit the site and check out whats happening
 with bitcoin!
+To contribute, fork and clone this repo to your local machine and run ```npm install``` in the main 
+directory to install dependencies locally. 
 
 ## **Tech Used**
 
